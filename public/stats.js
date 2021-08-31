@@ -15,6 +15,8 @@ function calculateTotalWeight(data) {
   return totals;
 }
 
+
+
 function populateChart(data) {
   const durations = data.map(({ totalDuration }) => totalDuration);
   const pounds = calculateTotalWeight(data);
@@ -109,3 +111,25 @@ function populateChart(data) {
 
 // get all workout data from back-end
 API.getWorkoutsInRange().then(populateChart);
+
+
+
+
+
+
+// function calculateTotalDuration(data) {
+//   const totalDuration = [];
+
+//   data.forEach((workout) => {
+//     const durationTotal = workout.exercises.reduce(( { type, duration }) => {
+//       if (type === 'resistance') {
+//         return duration;
+//       } 
+//         return duration;
+//       });
+
+//     totalDuration.push(durationTotal);
+//   });
+
+//   return totalDuration;
+// }
